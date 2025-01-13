@@ -6,8 +6,8 @@ const { userManagerServiceUrl, userManagerAPIkey, tokenUrl, consumerKey, consume
 const getClientCredentials = oauth.clientCredentials(
   axios.create(),
   'https://sts.choreo.dev/oauth2/token',
-   'B9R66Cpknoynbc5H6WxRrlidUVYa' ,
-   'AdOnjkWpalfPm5KeRy0oaK8CJrMa'
+   'B9R66Cpknoynbc5H6WxRrlidUVYa',
+   'test'
   );
 //{
 //  url: 'https://sts.choreo.dev/oauth2/token',
