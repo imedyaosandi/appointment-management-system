@@ -29,5 +29,8 @@ module.exports = {
     twilioAuthToken,
     twilioFromPhoneNumber,
     userManagerServiceUrl,
-    userManagerAPIkey
+    userManagerAPIkey,
+    tokenUrl,
+    consumerKey,
+    consumerSecret
 };
