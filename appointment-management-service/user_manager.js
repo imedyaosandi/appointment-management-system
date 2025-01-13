@@ -13,7 +13,7 @@ const getClientCredentials = oauth.clientCredentials(
 const auth = async () => {
 try{
 const resp = await getClientCredentials();
-console.log(resp);
+console.log('token response ===================*****************> ',resp);
 return resp;
 }catch (error) {
          console.error('Error fetching token details:', error);
@@ -26,7 +26,7 @@ const api = axios.create({
     baseURL: userManagerServiceUrl,
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ', accessToken,
+      'Authorization': 'Bearer ${accessToken}',
       'Choreo-API-Key': userManagerAPIkey,
     }
   });
