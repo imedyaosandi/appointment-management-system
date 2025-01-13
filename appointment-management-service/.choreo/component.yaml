@@ -4,7 +4,7 @@ endpoints:
   - name: appointments
     service:
       basePath: /
-      port: 8090
+      port: 8080
     type: REST
     # +optional Network level visibility of the endpoint. Defaults to Public
     # Accepted values: Project|Organization|Public.
@@ -14,3 +14,5 @@ dependencies:
   connectionReferences:
     - name: user-mgt-con
       resourceRef: service:/appointmentservice/usermgt-service/v1/bc224/PUBLIC
+    - name: app-svc-db-con
+      resourceRef: database:Appointment-service/appointment-db1
