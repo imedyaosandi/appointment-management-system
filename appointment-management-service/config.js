@@ -13,8 +13,8 @@ const twilioAuthToken = process.env.authToken;
 const twilioFromPhoneNumber = process.env.number;
 
 // User Manager configruation
-const userManagerServiceUrl = 'https://ac4f2f3b-fbdf-446d-80af-dc4b33adcf65-dev.e1-us-east-azure.choreoapis.dev/appointmentservice/usermgt-service/v1.0';
-const userManagerAPIkey = process.env.apiKey;
+const userManagerServiceUrl = process.env.CHOREO_USER_MGT_CON_SERVICEURL;
+const userManagerAPIkey = process.env.CHOREO_USER_MGT_CON_CHOREOAPIKEY;
 
 module.exports = {
     dbHost,

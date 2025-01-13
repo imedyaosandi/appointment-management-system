@@ -10,3 +10,7 @@ endpoints:
     # Accepted values: Project|Organization|Public.
     networkVisibility: Public
     schemaFilePath: openapi.yaml
+dependencies:
+  connectionReferences:
+    - name: user-mgt-con
+      resourceRef: service:/appointmentservice/usermgt-service/v1/bc224/PUBLIC
