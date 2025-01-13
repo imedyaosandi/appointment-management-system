@@ -4,11 +4,18 @@ const configs = require('./config');
 const { userManagerServiceUrl, userManagerAPIkey, tokenUrl, consumerKey, consumerSecret } = configs;
 
 const getClientCredentials = oauth.clientCredentials(
-  axios.create(),{
-  url: tokenUrl,
-  client_id: consumerKey,
-  client_secret: consumerSecret
-  });
+  axios.create(),
+  'https://sts.choreo.dev/oauth2/token',
+  consumerKey,
+  consumerSecret
+  );
+
+
+//  {
+//  url: tokenUrl,
+//  client_id: consumerKey,
+//  client_secret: consumerSecret
+//  });
 const getAccessToken = async () => {
 try{
 const auth = await getClientCredentials();
