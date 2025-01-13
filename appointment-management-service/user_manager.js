@@ -10,7 +10,7 @@ const getClientCredentials = oauth.clientCredentials(
   client_id: consumerKey,
   client_secret: consumerSecret
   });
-const auth = async () ==> {
+const auth = async () => {
 try{
 const resp = await getClientCredentials();
 console.log(resp);
