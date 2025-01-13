@@ -13,8 +13,8 @@ const twilioAuthToken = process.env.authToken;
 const twilioFromPhoneNumber = process.env.number;
 
 // User Manager configruation
-const userManagerServiceUrl = process.env.CHOREO_USER_MGT_CON_SERVICEURL;
-const userManagerAPIkey = process.env.CHOREO_USER_MGT_CON_CHOREOAPIKEY;
+const userManagerServiceUrl = process.env.CHOREO_APP_SVC_USER_MGT_CON_SERVICEURL;
+const userManagerAPIkey = process.env.CHOREO_APP_SVC_USER_MGT_CON_CHOREOAPIKEY;
 
 module.exports = {
     dbHost,

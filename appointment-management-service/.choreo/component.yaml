@@ -12,7 +12,7 @@ endpoints:
     schemaFilePath: openapi.yaml
 dependencies:
   connectionReferences:
-    - name: user-mgt-con
+    - name: app-svc-user-mgt-con
       resourceRef: service:/appointmentservice/usermgt-service/v1/bc224/PUBLIC
     - name: app-svc-db-con
       resourceRef: database:Appointment-service/appointment-db1
