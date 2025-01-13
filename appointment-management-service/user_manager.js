@@ -26,7 +26,7 @@ const api = axios.create({
     baseURL: userManagerServiceUrl,
     headers: {
       'Content-Type': 'application/json',
-      'Authorization': 'Bearer ${accessToken}',
+      'Authorization': `Bearer ${accessToken}`,
       'Choreo-API-Key': userManagerAPIkey,
     }
   });
