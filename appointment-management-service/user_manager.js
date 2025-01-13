@@ -10,7 +10,7 @@ const getClientCredentials = oauth.clientCredentials(
   client_id: consumerKey,
   client_secret: consumerSecret
   });
-const accessToken = async () => {
+const getAccessToken = async () => {
 try{
 const auth = await getClientCredentials();
 console.log('token response ===================*****************> ',auth);
@@ -22,7 +22,9 @@ return auth.access_token;
 }
 //const accessToken = auth.access_token;
 
-const api = axios.create({
+const createApiClient = async () => {
+  const accessToken = await getAccessToken();
+  return axios.create({
     baseURL: userManagerServiceUrl,
     headers: {
       'Content-Type': 'application/json',
@@ -30,9 +32,20 @@ const api = axios.create({
       'Choreo-API-Key': userManagerAPIkey,
     }
   });
+};
+
+//const api = axios.create({
+//    baseURL: userManagerServiceUrl,
+//    headers: {
+//      'Content-Type': 'application/json',
+//      'Authorization': `Bearer ${accessToken}`,
+//      'Choreo-API-Key': userManagerAPIkey,
+//    }
+//  });
 
 const getUserDetails = async (email) => {
     try {
+        const api = await createApiClient();
         const response = await api.get(`/users/${email}`);
         console.log(response);
         return response.data;
