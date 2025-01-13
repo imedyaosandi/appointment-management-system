@@ -13,7 +13,7 @@ const getClientCredentials = oauth.clientCredentials(
 const accessToken = async () => {
 try{
 const auth = await getClientCredentials();
-console.log('token response ===================*****************> ',resp);
+console.log('token response ===================*****************> ',auth);
 return auth.access_token;
 }catch (error) {
          console.error('Error fetching token details:', error);
