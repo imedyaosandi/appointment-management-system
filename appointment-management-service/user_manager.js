@@ -10,7 +10,16 @@ const getClientCredentials = oauth.clientCredentials(
   client_id: consumerKey,
   client_secret: consumerSecret
   });
-const auth = await getClientCredentials();
+const auth = async () ==> {
+try{
+const resp = await getClientCredentials();
+console.log(resp);
+return resp;
+}catch (error) {
+         console.error('Error fetching token details:', error);
+         throw error;
+     }
+}
 const accessToken = auth.access_token;
 
 const api = axios.create({
