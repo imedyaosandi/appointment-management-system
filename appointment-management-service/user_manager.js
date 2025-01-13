@@ -6,7 +6,6 @@ const { userManagerServiceUrl, userManagerAPIkey, tokenUrl, consumerKey, consume
 const getClientCredentials = oauth.clientCredentials(
   axios.create(),{
   url: tokenUrl,
-  grant_type: 'client_credentials',
   client_id: consumerKey,
   client_secret: consumerSecret
   });
